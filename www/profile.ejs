@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/67f58695eb.js" crossorigin="anonymous"></script>
+</head>
+
+<body
+ style="background-image: url('https://i.hizliresim.com/ns7up7v.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed;">
+
+    <div class="container" style="margin-top: 10%;">
+        <div class="card mx-auto" style="background-color: rgba(255, 255, 255, 0.623); width: 70%; border-radius: 50px;">
+            <div class="card-header text-center">
+                <h5 style="font-size: 30px; font-family: 'Times New Roman', Times, serif; font-weight: bold; font-style: italic; color: #1d6eb9;">Github Profile Info</h5>
+            </div>
+            <div class="card-body text-center">
+                <img src="<%= user.photos[0].value %>" alt="Profile Image" class="img-fluid rounded-circle mb-3"
+                    style="width: 20%;">
+                <h3>
+                    <%= user.displayName %>
+                </h3>
+                <p>
+                Followers Count: <%= user._json.followers %><br>
+                Following Count: <%= user._json.following %><br>
+                Repo Count: <%= user._json.public_repos %><br>
+                Location: <%= user._json.location ? user._json.location : 'N/A' %><br>
+                Create Date: <%= user._json.created_at %><br>
+                ID: <%= user.id %></p>
+                <a href="/logout" class="btn btn-danger" style="font-size: 18px; background-color: #df342e; border-color: #df342e; border-radius: 50px; margin-top: 20px;">Logout <i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<!--
+    Author: github.com/fastuptime
+-->
